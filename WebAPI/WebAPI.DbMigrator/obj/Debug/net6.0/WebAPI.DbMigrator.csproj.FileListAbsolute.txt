@@ -1,0 +1,17 @@
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\bin\Debug\net6.0\WebAPI.DbMigrator.deps.json
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\bin\Debug\net6.0\WebAPI.DbMigrator.runtimeconfig.json
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\bin\Debug\net6.0\WebAPI.DbMigrator.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\bin\Debug\net6.0\WebAPI.DbMigrator.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\bin\Debug\net6.0\WebAPI.EFCore.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\bin\Debug\net6.0\WebAPI.EFCore.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.csproj.AssemblyReference.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.AssemblyInfoInputs.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.AssemblyInfo.cs
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.csproj.CoreCompileInputs.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.csproj.CopyComplete
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\refint\WebAPI.DbMigrator.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\WebAPI.DbMigrator.genruntimeconfig.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.DbMigrator\obj\Debug\net6.0\ref\WebAPI.DbMigrator.dll

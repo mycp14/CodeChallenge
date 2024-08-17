@@ -1,0 +1,17 @@
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.Repository.deps.json
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.Repository.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.Repository.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.DbMigrator.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.EFCore.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.DbMigrator.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\bin\Debug\net6.0\WebAPI.EFCore.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.csproj.AssemblyReference.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.AssemblyInfoInputs.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.AssemblyInfo.cs
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.csproj.CoreCompileInputs.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.csproj.CopyComplete
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\refint\WebAPI.Repository.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\WebAPI.Repository.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.Repository\obj\Debug\net6.0\ref\WebAPI.Repository.dll

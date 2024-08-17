@@ -1,0 +1,11 @@
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\bin\Debug\net6.0\WebAPI.EFCore.deps.json
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\bin\Debug\net6.0\WebAPI.EFCore.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\bin\Debug\net6.0\WebAPI.EFCore.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\WebAPI.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\WebAPI.EFCore.AssemblyInfoInputs.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\WebAPI.EFCore.AssemblyInfo.cs
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\WebAPI.EFCore.csproj.CoreCompileInputs.cache
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\WebAPI.EFCore.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\refint\WebAPI.EFCore.dll
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\WebAPI.EFCore.pdb
+D:\Ehrlich\Source\WebAPI\WebAPI.EFCore\obj\Debug\net6.0\ref\WebAPI.EFCore.dll

@@ -3,12 +3,12 @@ using WebAPI.EFCore;
 
 namespace WebAPI.Repository
 {
-    public interface IPizzaTypeeRepository : IRepository<PizzaType>
+    public interface IPizzaTypeRepository : IRepository<PizzaType>
     {
 
     }
 
-    public class PizzaTypeRepository : RepositoryBase<PizzaType>, IPizzaTypeeRepository
+    public class PizzaTypeRepository : RepositoryBase<PizzaType>, IPizzaTypeRepository
     {
         public PizzaTypeRepository(IDbFactory dbFactory) : base(dbFactory) { }
     }

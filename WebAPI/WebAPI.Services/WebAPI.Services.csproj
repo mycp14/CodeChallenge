@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WebAPI.DbMigrator\WebAPI.DbMigrator.csproj" />
     <ProjectReference Include="..\WebAPI.EFCore\WebAPI.EFCore.csproj" />
     <ProjectReference Include="..\WebAPI.Repository\WebAPI.Repository.csproj" />

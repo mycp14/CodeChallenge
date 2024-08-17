@@ -29,6 +29,7 @@ namespace WebAPI.Services
             //Services
             services.AddTransient<IPizzaService, PizzaService>();
             services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IImportService, ImportService>();
         }
     }
 }

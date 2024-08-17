@@ -6,8 +6,8 @@ namespace WebAPI.EFCore
     public class OrderDetail
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int order_detail_id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int order_details_id { get; set; }
 
         public int order_id { get; set; }
         [ForeignKey("order_id")]

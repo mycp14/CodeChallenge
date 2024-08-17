@@ -88,6 +88,57 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "WebAPI.DbMigrator/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebAPI.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebAPI.DbMigrator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebAPI.DbMigrator.dll": {}
+        }
+      },
+      "WebAPI.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WebAPI.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebAPI.EFCore.dll": {}
+        }
+      },
+      "WebAPI.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebAPI.DbMigrator": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebAPI.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebAPI.Repository.dll": {}
+        }
+      },
+      "WebAPI.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebAPI.DbMigrator": "1.0.0",
+          "WebAPI.EFCore": "1.0.0",
+          "WebAPI.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebAPI.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebAPI.Services.dll": {}
+        }
       }
     }
   },
@@ -429,11 +480,32 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "WebAPI.DbMigrator/1.0.0": {
+      "type": "project",
+      "path": "../WebAPI.DbMigrator/WebAPI.DbMigrator.csproj",
+      "msbuildProject": "../WebAPI.DbMigrator/WebAPI.DbMigrator.csproj"
+    },
+    "WebAPI.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../WebAPI.EFCore/WebAPI.EFCore.csproj",
+      "msbuildProject": "../WebAPI.EFCore/WebAPI.EFCore.csproj"
+    },
+    "WebAPI.Repository/1.0.0": {
+      "type": "project",
+      "path": "../WebAPI.Repository/WebAPI.Repository.csproj",
+      "msbuildProject": "../WebAPI.Repository/WebAPI.Repository.csproj"
+    },
+    "WebAPI.Services/1.0.0": {
+      "type": "project",
+      "path": "../WebAPI.Services/WebAPI.Services.csproj",
+      "msbuildProject": "../WebAPI.Services/WebAPI.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "WebAPI.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -472,7 +544,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Ehrlich\\Source\\WebAPI\\WebAPI.Services\\WebAPI.Services.csproj": {
+              "projectPath": "D:\\Ehrlich\\Source\\WebAPI\\WebAPI.Services\\WebAPI.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

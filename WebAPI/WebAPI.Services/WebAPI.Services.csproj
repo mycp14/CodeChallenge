@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPI.DbMigrator\WebAPI.DbMigrator.csproj" />
+    <ProjectReference Include="..\WebAPI.EFCore\WebAPI.EFCore.csproj" />
+    <ProjectReference Include="..\WebAPI.Repository\WebAPI.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

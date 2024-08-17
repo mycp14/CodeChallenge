@@ -7,15 +7,15 @@ namespace WebAPI.EFCore
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int OrderDetailId { get; set; }
+        public int order_detail_id { get; set; }
 
-        public int OrderId { get; set; }
-        [ForeignKey("OrderId")]
+        public int order_id { get; set; }
+        [ForeignKey("order_id")]
         public Order Order { get; set; }
 
-        public string PizzaId { get; set; }
-        [ForeignKey("PizzaId")]
+        public string pizza_id { get; set; }
+        [ForeignKey("pizza_id")]
         public Pizza Pizza { get; set; }
-        public string Quantity { get; set; }
+        public string quantity { get; set; }
     }
 }

@@ -6,12 +6,12 @@ namespace WebAPI.EFCore
     public class Pizza
     {
         [Key]
-        public string PizzaId { get; set; }
-        public string PizzaTypeId { get; set; }
-        [ForeignKey("PizzaTypeId")]
+        public string pizza_id { get; set; }
+        public string pizza_type_id { get; set; }
+        [ForeignKey("pizza_type_id")]
         public PizzaType PizzaType { get; set; }
-        public string Size { get; set; }
-        public float Price { get; set; }
+        public string size { get; set; }
+        public float price { get; set; }
 
     }
 }

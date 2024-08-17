@@ -7,8 +7,8 @@ namespace WebAPI.EFCore
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int OrderId { get; set; }
-        public DateOnly Date { get; set; }
-        public TimeOnly Time { get; set; }
+        public int order_id { get; set; }
+        public DateOnly date { get; set; }
+        public TimeOnly time { get; set; }
     }
 }

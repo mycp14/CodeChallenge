@@ -1,4 +1,6 @@
 ﻿
+using WebAPI.EFCore;
+
 namespace WebAPI.Services
 {
     public class OrderDetailVM
@@ -7,5 +9,6 @@ namespace WebAPI.Services
         public int order_id { get; set; }
         public string pizza_id { get; set; }
         public string quantity { get; set; }
+        public Order Order { get; set; }
     }
 }

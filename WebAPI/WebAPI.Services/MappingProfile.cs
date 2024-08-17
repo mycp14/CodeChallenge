@@ -8,7 +8,9 @@ namespace WebAPI.Services
         public MappingProfile()
         {
             CreateMap<PizzaType, PizzaTypeVM>().ReverseMap();
-
+            CreateMap<Pizza, PizzaVM>().ReverseMap();
+            CreateMap<Order, OrderVM>().ReverseMap();
+            CreateMap<OrderDetail, OrderDetailVM>().ReverseMap();
         }
     }
 }

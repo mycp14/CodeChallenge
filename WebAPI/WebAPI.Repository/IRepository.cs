@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace WebAPI.Repository
 {
     public interface IRepository<T> where T : class
     {
+        //Marks an bulk entity as new
+        Task BulkAdd(IEnumerable<T> entities);
         // Marks an entity as new
         Task Add(T entity);
         // Marks an entity as modified
@@ -56,6 +59,11 @@ namespace WebAPI.Repository
         public virtual async Task Add(T entity)
         {
             await dbSet.AddAsync(entity);
+        }
+
+        public virtual async Task BulkAdd(IEnumerable<T> entities)
+        {
+            await dbSet.AddRangeAsync(entities);
         }
 
         public virtual async Task Update(T entity)

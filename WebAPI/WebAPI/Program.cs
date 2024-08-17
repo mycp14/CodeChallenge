@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using WebAPI.DbMigrator.DbContext;
 using WebAPI.Services;
 
@@ -12,6 +13,27 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.RegisterWebApiDependencies();
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Sales Web API",
+        Description = "Sales API .Net Core 6",
+        TermsOfService = new Uri("https://example.com/terms"),
+        Contact = new OpenApiContact
+        {
+            Name = "Your Name XYZ",
+            Email = "xyz@gmail.com",
+            Url = new Uri("https://example.com"),
+        },
+        License = new OpenApiLicense
+        {
+            Name = "Use under OpenApiLicense",
+            Url = new Uri("https://example.com/license"),
+        }
+    });
+});
 
 builder.Services.AddDbContext<WebAPIDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("WebAPIDbContext")));

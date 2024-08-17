@@ -23,11 +23,41 @@ namespace WebAPI.Services
         public async Task<List<PizzaTypeVM>> GetAllPizzaTypes()
         {
             var pizzaTypes = await _pizzaTypeRepository.GetAll();
-            var listofPizzaTypes = _mapper.Map<List<PizzaType>, List<PizzaTypeVM>>(pizzaTypes.ToList());
+            var listofPizzaTypes = _mapper.Map<IEnumerable<PizzaType>, List<PizzaTypeVM>>(pizzaTypes.ToList());
             if (listofPizzaTypes == null)
                 throw new AppException($"No Pizza Type found.");
 
             return listofPizzaTypes;
+        }
+
+        public async Task<List<PizzaVM>> GetAllPizzas()
+        {
+            var pizzaTypes = await _pizzaRepository.GetAll();
+            var listofPizzaTypes = _mapper.Map<IEnumerable<Pizza>, List<PizzaVM>>(pizzaTypes.ToList());
+            if (listofPizzaTypes == null)
+                throw new AppException($"No Pizzas found.");
+
+            return listofPizzaTypes;
+        }
+
+        public async Task<PizzaTypeVM> GetPizzaTypeById(string id)
+        {
+            var pizzaTypes = await _pizzaTypeRepository.GetById(id);
+            var pizzaTypeVM = _mapper.Map<PizzaType, PizzaTypeVM>(pizzaTypes);
+            if (pizzaTypeVM == null)
+                throw new AppException($"No Pizzas type found by this id {id}");
+
+            return pizzaTypeVM;
+        }
+
+        public async Task<PizzaVM> GetPizzaById(string id)
+        {
+            var pizza = await _pizzaRepository.GetById(id);
+            var pizzaVM = _mapper.Map<Pizza, PizzaVM>(pizza);
+            if (pizzaVM == null)
+                throw new AppException($"No Pizzas found by this id {id}");
+
+            return pizzaVM;
         }
     }
 }

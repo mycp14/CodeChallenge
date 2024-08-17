@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
                 {
                     return BadRequest(new { Message = ApiConstants.ModelStateInvalid, Members = CompileModelStateError(ModelState) });
                 }
-                return Ok(new { Message = ApiConstants.SuccessResult });
+                return Ok(new { Message = ApiConstants.SuccessResult, Result = ApiConstants.ImportResult });
             }
             catch (AppException e)
             {
@@ -87,7 +87,7 @@ namespace WebAPI.Controllers
                 {
                     return BadRequest(new { Message = ApiConstants.ModelStateInvalid, Members = CompileModelStateError(ModelState) });
                 }
-                return Ok(new { Message = ApiConstants.SuccessResult });
+                return Ok(new { Message = ApiConstants.SuccessResult, Result = ApiConstants.ImportResult });
             }
             catch (AppException e)
             {
@@ -126,7 +126,7 @@ namespace WebAPI.Controllers
                 {
                     return BadRequest(new { Message = ApiConstants.ModelStateInvalid, Members = CompileModelStateError(ModelState) });
                 }
-                return Ok(new { Message = ApiConstants.SuccessResult });
+                return Ok(new { Message = ApiConstants.SuccessResult, Result = ApiConstants.ImportResult });
             }
             catch (AppException e)
             {
@@ -165,7 +165,7 @@ namespace WebAPI.Controllers
                 {
                     return BadRequest(new { Message = ApiConstants.ModelStateInvalid, Members = CompileModelStateError(ModelState) });
                 }
-                return Ok(new { Message = ApiConstants.SuccessResult });
+                return Ok(new { Message = ApiConstants.SuccessResult, Result = ApiConstants.ImportResult });
             }
             catch (AppException e)
             {

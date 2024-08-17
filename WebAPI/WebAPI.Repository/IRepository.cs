@@ -1,4 +1,5 @@
 ﻿
+using Azure;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using WebAPI.DbMigrator.DbContext;
+using WebAPI.EFCore;
 
 namespace WebAPI.Repository
 {
@@ -29,13 +31,17 @@ namespace WebAPI.Repository
         Task<IEnumerable<T>> GetAll();
         // Gets entities using delegate
         Task<IEnumerable<T>> GetMany(Expression<Func<T, bool>> where);
+        // Gets total count of type T
+        Task<int> GetTotalCount();
+        //gets all with pagination of type T
+        Task<IEnumerable<T>> GetAllWithPagination(int pageNumber, int pageSize);
     }
 
     public abstract class RepositoryBase<T> where T : class
     {
         #region Properties
         private WebAPIDbContext? dataContext;
-        private readonly DbSet<T> dbSet;
+        public readonly DbSet<T> dbSet;
 
         protected IDbFactory DbFactory
         {
@@ -104,6 +110,16 @@ namespace WebAPI.Repository
         public async Task<T?> Get(Expression<Func<T, bool>> where)
         {
             return await dbSet.Where(where).FirstOrDefaultAsync();
+        }
+
+        public async Task<int> GetTotalCount()
+        {
+            return await dbSet.CountAsync();
+        }
+
+        public virtual async Task<IEnumerable<T>> GetAllWithPagination(int pageNumber, int pageSize)
+        {
+            return await dbSet.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
         }
         #endregion
     }

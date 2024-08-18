@@ -32,7 +32,7 @@ namespace WebAPI.Services
 
         public async Task<List<PizzaVM>> GetAllPizzas()
         {
-            var pizzaTypes = await _pizzaRepository.GetAll();
+            var pizzaTypes = await _pizzaRepository.GetPizzaIncludePizzaType();
             var listofPizzaTypes = _mapper.Map<IEnumerable<Pizza>, List<PizzaVM>>(pizzaTypes.ToList());
             if (listofPizzaTypes == null)
                 throw new AppException($"No Pizzas found.");

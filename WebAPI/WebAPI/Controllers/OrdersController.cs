@@ -55,7 +55,7 @@ namespace WebAPI.Controllers
         /// Get order information by id
         /// </summary>
         /// <returns></returns>
-        [HttpGet("GetOrderById{id}")]
+        [HttpGet("GetOrderById/{id}")]
         public async Task<IActionResult> GetOrderById(string id)
         {
             try
@@ -73,7 +73,7 @@ namespace WebAPI.Controllers
         /// Get order detail information by id
         /// </summary>
         /// <returns></returns>
-        [HttpGet("GetOrderDetailById{id}")]
+        [HttpGet("GetOrderDetailById/{id}")]
         public async Task<IActionResult> GetOrderDetailById(string id)
         {
             try

@@ -52,7 +52,7 @@ namespace WebAPI.Services
 
         public async Task<PizzaVM> GetPizzaById(string id)
         {
-            var pizza = await _pizzaRepository.GetById(id);
+            var pizza = (await _pizzaRepository.GetPizzaIncludePizzaType()).Where(x => x.pizza_id == id).FirstOrDefault();
             var pizzaVM = _mapper.Map<Pizza, PizzaVM>(pizza);
             if (pizzaVM == null)
                 throw new AppException($"No Pizzas found by this id {id}");

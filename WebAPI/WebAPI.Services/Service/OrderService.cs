@@ -54,8 +54,8 @@ namespace WebAPI.Services
 
         public async Task<OrderDetailVM> GetOrderDetailById(string id)
         {
-            var orderDetail = await _orderDetailRepository.Get(x => x.order_details_id == Convert.ToInt32(id));
-            var orderDetailVM = _mapper.Map<OrderDetail, OrderDetailVM>(orderDetail);
+            var orderDetail = await _orderDetailRepository.GetManyOrderDetailsIncludeOrderAndPizza(x => x.order_details_id == Convert.ToInt32(id));
+            var orderDetailVM = _mapper.Map<OrderDetail, OrderDetailVM>(orderDetail.FirstOrDefault());
             if (orderDetailVM == null)
                 throw new AppException($"No Order detail found by this id {id}.");
 

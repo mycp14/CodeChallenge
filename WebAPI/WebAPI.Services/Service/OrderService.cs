@@ -33,7 +33,7 @@ namespace WebAPI.Services
 
         public async Task<(int totalCount,List<OrderDetailVM> orderDetails)> GetAllOrderDetailsWithPagination(int page, int pageSize)
         {
-            var orderDetails = await _orderDetailRepository.GetAllWithPagination(page, pageSize);
+            var orderDetails = await _orderDetailRepository.GetOrderDetailsWithPaginationIncludeOrderAndPizza(page, pageSize);
             int totalCount = await _orderDetailRepository.GetTotalCount();
             var listOfOrderDetails = _mapper.Map<IEnumerable<OrderDetail>, List<OrderDetailVM>>(orderDetails);
             if (listOfOrderDetails == null)
@@ -64,7 +64,7 @@ namespace WebAPI.Services
 
         public async Task<List<OrderDetailVM>> GetOrderDetailsByOrderId(string orderId)
         {
-            var orderDetail = await _orderDetailRepository.GetMany(x => x.order_id == Convert.ToInt32(orderId));
+            var orderDetail = await _orderDetailRepository.GetManyOrderDetailsIncludeOrderAndPizza(x => x.order_id == Convert.ToInt32(orderId));
             var orderDetailVM = _mapper.Map<IEnumerable<OrderDetail>, List<OrderDetailVM>>(orderDetail);
             if (orderDetailVM == null)
                 throw new AppException($"No Order detail found by this order id {orderId}.");
@@ -74,7 +74,7 @@ namespace WebAPI.Services
 
         public async Task<List<OrderDetailVM>> GetOrderDetailsByDate(DateTime date)
         {
-            var orderDetail = await _orderDetailRepository.GetMany(x => x.Order.date == DateOnly.FromDateTime(date));
+            var orderDetail = await _orderDetailRepository.GetManyOrderDetailsIncludeOrderAndPizza(x => x.Order.date == DateOnly.FromDateTime(date));
             var orderDetailVM = _mapper.Map<IEnumerable<OrderDetail>, List<OrderDetailVM>>(orderDetail);
             if (orderDetailVM == null)
                 throw new AppException($"No Order detail found by this date {date}.");

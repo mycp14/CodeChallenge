@@ -10,5 +10,6 @@ namespace WebAPI.Services
         public string pizza_id { get; set; }
         public string quantity { get; set; }
         public Order Order { get; set; }
+        public Pizza Pizza { get; set; }
     }
 }

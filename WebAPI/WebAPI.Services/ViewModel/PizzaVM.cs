@@ -7,5 +7,6 @@ namespace WebAPI.Services
         public string pizza_type_id { get; set; }
         public string size { get; set; }
         public float price { get; set; }
+        public PizzaTypeVM PizzaType { get; set;}
     }
 }

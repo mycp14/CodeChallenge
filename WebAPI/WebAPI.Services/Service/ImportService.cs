@@ -66,19 +66,19 @@ namespace WebAPI.Services
         public async Task ImportPizzas(Stream fileStream)
         {
             var list = ReadPizzasCsvFile(fileStream).ToList();
-            var mapPizza = _mapper.Map<List<PizzaVM>, IEnumerable<Pizza>>(list.ToList());
+            var mapPizza = _mapper.Map<List<PizzaDetailsVM>, IEnumerable<Pizza>>(list.ToList());
             await _pizzaRepository.BulkAdd(mapPizza);
             await _unitOfWork.CommitAsync();
         }
 
-        private List<PizzaVM> ReadPizzasCsvFile(Stream fileStream)
+        private List<PizzaDetailsVM> ReadPizzasCsvFile(Stream fileStream)
         {
             try
             {
                 using (var reader = new StreamReader(fileStream))
                 using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
-                    var records = csv.GetRecords<PizzaVM>();
+                    var records = csv.GetRecords<PizzaDetailsVM>();
                     return records.ToList();
                 }
             }
@@ -138,19 +138,19 @@ namespace WebAPI.Services
         public async Task ImportOrderDetails(Stream fileStream)
         {
             var list = ReadOrderDetailsCsvFile(fileStream).ToList();
-            var mapOrderDetail = _mapper.Map<List<OrderDetailVM>, IEnumerable<OrderDetail>>(list.ToList());
+            var mapOrderDetail = _mapper.Map<List<OrdersInfoVM>, IEnumerable<OrderDetail>>(list.ToList());
             await _orderDetailRepository.BulkAdd(mapOrderDetail);
             await _unitOfWork.CommitAsync();
         }
 
-        private IEnumerable<OrderDetailVM> ReadOrderDetailsCsvFile(Stream fileStream)
+        private IEnumerable<OrdersInfoVM> ReadOrderDetailsCsvFile(Stream fileStream)
         {
             try
             {
                 using (var reader = new StreamReader(fileStream))
                 using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
-                    var records = csv.GetRecords<OrderDetailVM>();
+                    var records = csv.GetRecords<OrdersInfoVM>();
                     return records.ToList();
                 }
             }
